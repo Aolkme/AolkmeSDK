@@ -1,0 +1,15 @@
+aolkmesdk\logger_buffer.o: ..\AolkmeComponent\AolkmeLogger\logger_buffer.c
+aolkmesdk\logger_buffer.o: ..\AolkmeComponent\AolkmeLogger\logger_buffer.h
+aolkmesdk\logger_buffer.o: ..\AolkmeComponent\AolkmeLogger\Aolkme_logger.h
+aolkmesdk\logger_buffer.o: ../AOLKME/include/Aolkme_platform.h
+aolkmesdk\logger_buffer.o: ../AOLKME/include/Aolkme_typedef.h
+aolkmesdk\logger_buffer.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+aolkmesdk\logger_buffer.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stdbool.h
+aolkmesdk\logger_buffer.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stddef.h
+aolkmesdk\logger_buffer.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\string.h
+aolkmesdk\logger_buffer.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
+aolkmesdk\logger_buffer.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+aolkmesdk\logger_buffer.o: ../AOLKME/include/Aolkme_error.h
+aolkmesdk\logger_buffer.o: ..\AolkmeComponent\AolkmeLogger\logger_core.h
+aolkmesdk\logger_buffer.o: ..\AOLKME\src\internal\Aolkme_Core_Private.h
+aolkmesdk\logger_buffer.o: ../AOLKME/include/Aolkme_core.h

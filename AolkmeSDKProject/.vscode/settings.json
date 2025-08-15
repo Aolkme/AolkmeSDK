@@ -1,0 +1,19 @@
+{
+    "files.associations": {
+        "*.c": "c",
+        "stdint.h": "c",
+        "logger_core.h": "c",
+        "stdarg.h": "c",
+        "logger_buffer.h": "c",
+        "aolkme_core.h": "c",
+        "aolkmesdk_user_info.h": "c",
+        "aolkme_misc.h": "c",
+        "aolkme_platform.h": "c",
+        "string.h": "c",
+        "aolkme_logger.h": "c",
+        "stdio.h": "c",
+        "aolkmeosal_sysmon.h": "c",
+        "aolkme_event.h": "c"
+    },
+    "cmake.sourceDirectory": "E:/GItHub-Project/Aolkme/AolkmeSDK/Drivers/CMSIS/NN"
+}

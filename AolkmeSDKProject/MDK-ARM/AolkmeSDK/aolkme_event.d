@@ -1,0 +1,13 @@
+aolkmesdk\aolkme_event.o: ..\AolkmeComponent\AolkmeEvent\src\Aolkme_event.c
+aolkmesdk\aolkme_event.o: ../AolkmeComponent/AolkmeEvent/include/Aolkme_event.h
+aolkmesdk\aolkme_event.o: ../AOLKME/include/Aolkme_platform.h
+aolkmesdk\aolkme_event.o: ../AOLKME/include/Aolkme_typedef.h
+aolkmesdk\aolkme_event.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+aolkmesdk\aolkme_event.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stdbool.h
+aolkmesdk\aolkme_event.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stddef.h
+aolkmesdk\aolkme_event.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\string.h
+aolkmesdk\aolkme_event.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
+aolkmesdk\aolkme_event.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+aolkmesdk\aolkme_event.o: ../AOLKME/include/Aolkme_error.h
+aolkmesdk\aolkme_event.o: ..\AOLKME\src\internal\Aolkme_core_private.h
+aolkmesdk\aolkme_event.o: ../AOLKME/include/Aolkme_core.h

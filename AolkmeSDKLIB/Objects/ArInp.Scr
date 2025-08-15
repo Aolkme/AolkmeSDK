@@ -1,0 +1,9 @@
+--create .\Objects\AolkmeSDKLIB.lib
+.\objects\aolkme_1.o
+.\objects\aolkme_core_1.o
+.\objects\aolkme_platform_1.o
+.\objects\aolkme_verify_1.o
+.\objects\aolkme_event.o
+.\objects\logger_buffer.o
+.\objects\logger_core.o
+.\objects\logger_formatter.o

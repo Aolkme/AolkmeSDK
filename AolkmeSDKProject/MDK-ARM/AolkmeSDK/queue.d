@@ -1,0 +1,15 @@
+aolkmesdk\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/queue.c
+aolkmesdk\queue.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
+aolkmesdk\queue.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\string.h
+aolkmesdk\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+aolkmesdk\queue.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stddef.h
+aolkmesdk\queue.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+aolkmesdk\queue.o: ../Core/Inc/FreeRTOSConfig.h
+aolkmesdk\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+aolkmesdk\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+aolkmesdk\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+aolkmesdk\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+aolkmesdk\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+aolkmesdk\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+aolkmesdk\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+aolkmesdk\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h

@@ -1,0 +1,12 @@
+aolkmesdk\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/list.c
+aolkmesdk\list.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
+aolkmesdk\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+aolkmesdk\list.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stddef.h
+aolkmesdk\list.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+aolkmesdk\list.o: ../Core/Inc/FreeRTOSConfig.h
+aolkmesdk\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+aolkmesdk\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+aolkmesdk\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+aolkmesdk\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+aolkmesdk\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+aolkmesdk\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h

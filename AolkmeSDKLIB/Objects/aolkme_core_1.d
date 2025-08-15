@@ -1,0 +1,12 @@
+.\objects\aolkme_core_1.o: Aolkme\src\Aolkme_core.c
+.\objects\aolkme_core_1.o: .\Aolkme\internal\Aolkme_core_private.h
+.\objects\aolkme_core_1.o: .\Aolkme\include\Aolkme_core.h
+.\objects\aolkme_core_1.o: .\Aolkme\include\Aolkme_platform.h
+.\objects\aolkme_core_1.o: .\Aolkme\include\Aolkme_typedef.h
+.\objects\aolkme_core_1.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\aolkme_core_1.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\aolkme_core_1.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\aolkme_core_1.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\string.h
+.\objects\aolkme_core_1.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\aolkme_core_1.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\aolkme_core_1.o: .\Aolkme\include\Aolkme_error.h

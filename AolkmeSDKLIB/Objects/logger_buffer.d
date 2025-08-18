@@ -1,6 +1,6 @@
-.\objects\logger_buffer.o: Aolkme\src\logger_buffer.c
-.\objects\logger_buffer.o: .\Aolkme\internal\logger_buffer.h
-.\objects\logger_buffer.o: .\Aolkme\include\Aolkme_logger.h
+.\objects\logger_buffer.o: ..\AolkmeSDKProject\AolkmeComponent\AolkmeLogger\logger_buffer.c
+.\objects\logger_buffer.o: ..\AolkmeSDKProject\AolkmeComponent\AolkmeLogger\logger_buffer.h
+.\objects\logger_buffer.o: ..\AolkmeSDKProject\AolkmeComponent\AolkmeLogger\Aolkme_logger.h
 .\objects\logger_buffer.o: .\Aolkme\include\Aolkme_platform.h
 .\objects\logger_buffer.o: .\Aolkme\include\Aolkme_typedef.h
 .\objects\logger_buffer.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stdint.h
@@ -10,6 +10,6 @@
 .\objects\logger_buffer.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
 .\objects\logger_buffer.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\logger_buffer.o: .\Aolkme\include\Aolkme_error.h
-.\objects\logger_buffer.o: .\Aolkme\internal\logger_core.h
+.\objects\logger_buffer.o: ..\AolkmeSDKProject\AolkmeComponent\AolkmeLogger\logger_core.h
 .\objects\logger_buffer.o: .\Aolkme\internal\Aolkme_Core_Private.h
 .\objects\logger_buffer.o: .\Aolkme\include\Aolkme_core.h

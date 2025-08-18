@@ -386,47 +386,47 @@
             <File>
               <FileName>Aolkme.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\Aolkme\include\Aolkme.h</FilePath>
+              <FilePath>..\AolkmeSDKProject\AOLKME\include\Aolkme.h</FilePath>
             </File>
             <File>
               <FileName>Aolkme_core.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\Aolkme\include\Aolkme_core.h</FilePath>
+              <FilePath>..\AolkmeSDKProject\AOLKME\include\Aolkme_core.h</FilePath>
             </File>
             <File>
               <FileName>Aolkme_error.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\Aolkme\include\Aolkme_error.h</FilePath>
+              <FilePath>..\AolkmeSDKProject\AOLKME\include\Aolkme_error.h</FilePath>
             </File>
             <File>
               <FileName>Aolkme_platform.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\Aolkme\include\Aolkme_platform.h</FilePath>
+              <FilePath>..\AolkmeSDKProject\AOLKME\include\Aolkme_platform.h</FilePath>
             </File>
             <File>
               <FileName>Aolkme_typedef.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\Aolkme\include\Aolkme_typedef.h</FilePath>
+              <FilePath>..\AolkmeSDKProject\AOLKME\include\Aolkme_typedef.h</FilePath>
             </File>
             <File>
               <FileName>Aolkme_version.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\Aolkme\include\Aolkme_version.h</FilePath>
+              <FilePath>..\AolkmeSDKProject\AOLKME\include\Aolkme_version.h</FilePath>
             </File>
             <File>
               <FileName>Aolkme_event.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\Aolkme\include\Aolkme_event.h</FilePath>
+              <FilePath>..\AolkmeSDKProject\AolkmeComponent\AolkmeEvent\include\Aolkme_event.h</FilePath>
             </File>
             <File>
               <FileName>Aolkme_event_types.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\Aolkme\include\Aolkme_event_types.h</FilePath>
+              <FilePath>..\AolkmeSDKProject\AolkmeComponent\AolkmeEvent\include\Aolkme_event_types.h</FilePath>
             </File>
             <File>
               <FileName>Aolkme_logger.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\Aolkme\include\Aolkme_logger.h</FilePath>
+              <FilePath>..\AolkmeSDKProject\AolkmeComponent\AolkmeLogger\Aolkme_logger.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -436,22 +436,22 @@
             <File>
               <FileName>Aolkme_core_private.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\Aolkme\internal\Aolkme_core_private.h</FilePath>
+              <FilePath>..\AolkmeSDKProject\AOLKME\src\internal\Aolkme_core_private.h</FilePath>
             </File>
             <File>
               <FileName>logger_buffer.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\Aolkme\internal\logger_buffer.h</FilePath>
+              <FilePath>..\AolkmeSDKProject\AolkmeComponent\AolkmeLogger\logger_buffer.h</FilePath>
             </File>
             <File>
               <FileName>logger_core.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\Aolkme\internal\logger_core.h</FilePath>
+              <FilePath>..\AolkmeSDKProject\AolkmeComponent\AolkmeLogger\logger_core.h</FilePath>
             </File>
             <File>
               <FileName>logger_formatter.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\Aolkme\internal\logger_formatter.h</FilePath>
+              <FilePath>..\AolkmeSDKProject\AolkmeComponent\AolkmeLogger\logger_formatter.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -461,42 +461,42 @@
             <File>
               <FileName>Aolkme.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Aolkme\src\Aolkme.c</FilePath>
+              <FilePath>..\AolkmeSDKProject\AOLKME\src\code\Aolkme.c</FilePath>
             </File>
             <File>
               <FileName>Aolkme_core.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Aolkme\src\Aolkme_core.c</FilePath>
+              <FilePath>..\AolkmeSDKProject\AOLKME\src\code\Aolkme_core.c</FilePath>
             </File>
             <File>
               <FileName>Aolkme_platform.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Aolkme\src\Aolkme_platform.c</FilePath>
+              <FilePath>..\AolkmeSDKProject\AOLKME\src\code\Aolkme_platform.c</FilePath>
             </File>
             <File>
               <FileName>Aolkme_verify.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Aolkme\src\Aolkme_verify.c</FilePath>
+              <FilePath>..\AolkmeSDKProject\AOLKME\src\code\Aolkme_verify.c</FilePath>
             </File>
             <File>
               <FileName>Aolkme_event.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Aolkme\src\Aolkme_event.c</FilePath>
+              <FilePath>..\AolkmeSDKProject\AolkmeComponent\AolkmeEvent\src\Aolkme_event.c</FilePath>
             </File>
             <File>
               <FileName>logger_buffer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Aolkme\src\logger_buffer.c</FilePath>
+              <FilePath>..\AolkmeSDKProject\AolkmeComponent\AolkmeLogger\logger_buffer.c</FilePath>
             </File>
             <File>
               <FileName>logger_core.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Aolkme\src\logger_core.c</FilePath>
+              <FilePath>..\AolkmeSDKProject\AolkmeComponent\AolkmeLogger\logger_core.c</FilePath>
             </File>
             <File>
               <FileName>logger_formatter.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Aolkme\src\logger_formatter.c</FilePath>
+              <FilePath>..\AolkmeSDKProject\AolkmeComponent\AolkmeLogger\logger_formatter.c</FilePath>
             </File>
           </Files>
         </Group>

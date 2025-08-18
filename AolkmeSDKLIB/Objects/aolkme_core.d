@@ -1,4 +1,4 @@
-.\objects\aolkme_core.o: Aolkme\src\Aolkme_core.c
+.\objects\aolkme_core.o: ..\AolkmeSDKProject\AOLKME\src\code\Aolkme_core.c
 .\objects\aolkme_core.o: .\Aolkme\internal\Aolkme_core_private.h
 .\objects\aolkme_core.o: .\Aolkme\include\Aolkme_core.h
 .\objects\aolkme_core.o: .\Aolkme\include\Aolkme_platform.h

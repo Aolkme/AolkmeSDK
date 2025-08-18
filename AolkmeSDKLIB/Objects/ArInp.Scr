@@ -1,8 +1,8 @@
 --create .\Objects\AolkmeSDKLIB.lib
-.\objects\aolkme_1.o
-.\objects\aolkme_core_1.o
-.\objects\aolkme_platform_1.o
-.\objects\aolkme_verify_1.o
+.\objects\aolkme.o
+.\objects\aolkme_core.o
+.\objects\aolkme_platform.o
+.\objects\aolkme_verify.o
 .\objects\aolkme_event.o
 .\objects\logger_buffer.o
 .\objects\logger_core.o

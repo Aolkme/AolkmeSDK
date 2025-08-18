@@ -1,4 +1,4 @@
-.\objects\aolkme_event.o: Aolkme\src\Aolkme_event.c
+.\objects\aolkme_event.o: ..\AolkmeSDKProject\AolkmeComponent\AolkmeEvent\src\Aolkme_event.c
 .\objects\aolkme_event.o: .\Aolkme\include\Aolkme_event.h
 .\objects\aolkme_event.o: .\Aolkme\include\Aolkme_platform.h
 .\objects\aolkme_event.o: .\Aolkme\include\Aolkme_typedef.h

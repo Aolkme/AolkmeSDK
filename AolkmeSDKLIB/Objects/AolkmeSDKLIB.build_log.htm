@@ -21,34 +21,30 @@ Target DLL:      UL2CM3.DLL V1.164.0.0
 Dialog DLL:      TCM.DLL V1.53.0.0
  
 <h2>Project:</h2>
-E:\GItHub-Project\Aolkme\AolkmeSDKLIB\AolkmeSDKLIB.uvprojx
-Project File Date:  08/15/2025
+E:\GItHub-Project\Aolkme\AolkmeSDK\AolkmeSDKLIB\AolkmeSDKLIB.uvprojx
+Project File Date:  08/18/2025
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\WorkSoftware\Keil\ARM\ARMCC\Bin'
 Rebuild target 'AolkmeSDK'
-Note: source file '.\Aolkme\src\Aolkme.c' - object file renamed from '.\Objects\Aolkme.o' to '.\Objects\aolkme_1.o'.
-Note: source file '.\Aolkme\src\Aolkme_core.c' - object file renamed from '.\Objects\Aolkme_core.o' to '.\Objects\aolkme_core_1.o'.
-Note: source file '.\Aolkme\src\Aolkme_platform.c' - object file renamed from '.\Objects\Aolkme_platform.o' to '.\Objects\aolkme_platform_1.o'.
-Note: source file '.\Aolkme\src\Aolkme_verify.c' - object file renamed from '.\Objects\Aolkme_verify.o' to '.\Objects\aolkme_verify_1.o'.
-compiling Aolkme_event.c...
-compiling Aolkme_core.c...
-Aolkme\src\Aolkme_core.c(27): warning:  #177-D: variable "appId"  was declared but never referenced
-  static const char appId[16] = "AolkmeSDKadmin";       
-Aolkme\src\Aolkme_core.c(28): warning:  #177-D: variable "AppKey"  was declared but never referenced
-  static const char AppKey[32] = "AK17WIZJENEY2WKTZVLMF4FG2FJI3";
-Aolkme\src\Aolkme_core.c: 2 warnings, 0 errors
-compiling logger_core.c...
 compiling Aolkme.c...
-compiling logger_buffer.c...
-compiling logger_formatter.c...
+compiling Aolkme_core.c...
+..\AolkmeSDKProject\AOLKME\src\code\Aolkme_core.c(27): warning:  #177-D: variable "appId"  was declared but never referenced
+  static const char appId[16] = "AolkmeSDKadmin";       
+..\AolkmeSDKProject\AOLKME\src\code\Aolkme_core.c(28): warning:  #177-D: variable "AppKey"  was declared but never referenced
+  static const char AppKey[32] = "AK17WIZJENEY2WKTZVLMF4FG2FJI3";
+..\AolkmeSDKProject\AOLKME\src\code\Aolkme_core.c: 2 warnings, 0 errors
 compiling Aolkme_verify.c...
 compiling Aolkme_platform.c...
-Aolkme\src\Aolkme_platform.c(14): warning:  #177-D: variable "g_halUartHandler"  was declared but never referenced
+..\AolkmeSDKProject\AOLKME\src\code\Aolkme_platform.c(14): warning:  #177-D: variable "g_halUartHandler"  was declared but never referenced
   static T_AolkmeHalUartHandler *g_halUartHandler = NULL;
-Aolkme\src\Aolkme_platform.c(15): warning:  #177-D: variable "g_halI2cHandler"  was declared but never referenced
+..\AolkmeSDKProject\AOLKME\src\code\Aolkme_platform.c(15): warning:  #177-D: variable "g_halI2cHandler"  was declared but never referenced
   static T_AolkmeHalI2cHandler *g_halI2cHandler = NULL;
-Aolkme\src\Aolkme_platform.c: 2 warnings, 0 errors
+..\AolkmeSDKProject\AOLKME\src\code\Aolkme_platform.c: 2 warnings, 0 errors
+compiling logger_core.c...
+compiling Aolkme_event.c...
+compiling logger_formatter.c...
+compiling logger_buffer.c...
 creating Library...
 ".\Objects\AolkmeSDKLIB.lib" - 0 Error(s), 4 Warning(s).
 
@@ -63,7 +59,7 @@ Package Vendor: Keil
   D:\WorkSoftware\Keil\armPack\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include
 
 <h2>Collection of Component Files used:</h2>
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:00
 </pre>
 </body>
 </html>

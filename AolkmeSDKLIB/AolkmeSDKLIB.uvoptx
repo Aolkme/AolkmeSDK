@@ -189,7 +189,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Aolkme\include\Aolkme.h</PathWithFileName>
+      <PathWithFileName>..\AolkmeSDKProject\AOLKME\include\Aolkme.h</PathWithFileName>
       <FilenameWithoutPath>Aolkme.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -201,7 +201,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Aolkme\include\Aolkme_core.h</PathWithFileName>
+      <PathWithFileName>..\AolkmeSDKProject\AOLKME\include\Aolkme_core.h</PathWithFileName>
       <FilenameWithoutPath>Aolkme_core.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -213,7 +213,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Aolkme\include\Aolkme_error.h</PathWithFileName>
+      <PathWithFileName>..\AolkmeSDKProject\AOLKME\include\Aolkme_error.h</PathWithFileName>
       <FilenameWithoutPath>Aolkme_error.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -225,7 +225,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Aolkme\include\Aolkme_platform.h</PathWithFileName>
+      <PathWithFileName>..\AolkmeSDKProject\AOLKME\include\Aolkme_platform.h</PathWithFileName>
       <FilenameWithoutPath>Aolkme_platform.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -237,7 +237,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Aolkme\include\Aolkme_typedef.h</PathWithFileName>
+      <PathWithFileName>..\AolkmeSDKProject\AOLKME\include\Aolkme_typedef.h</PathWithFileName>
       <FilenameWithoutPath>Aolkme_typedef.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -249,7 +249,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Aolkme\include\Aolkme_version.h</PathWithFileName>
+      <PathWithFileName>..\AolkmeSDKProject\AOLKME\include\Aolkme_version.h</PathWithFileName>
       <FilenameWithoutPath>Aolkme_version.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -261,7 +261,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Aolkme\include\Aolkme_event.h</PathWithFileName>
+      <PathWithFileName>..\AolkmeSDKProject\AolkmeComponent\AolkmeEvent\include\Aolkme_event.h</PathWithFileName>
       <FilenameWithoutPath>Aolkme_event.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -273,7 +273,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Aolkme\include\Aolkme_event_types.h</PathWithFileName>
+      <PathWithFileName>..\AolkmeSDKProject\AolkmeComponent\AolkmeEvent\include\Aolkme_event_types.h</PathWithFileName>
       <FilenameWithoutPath>Aolkme_event_types.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -285,7 +285,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Aolkme\include\Aolkme_logger.h</PathWithFileName>
+      <PathWithFileName>..\AolkmeSDKProject\AolkmeComponent\AolkmeLogger\Aolkme_logger.h</PathWithFileName>
       <FilenameWithoutPath>Aolkme_logger.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -305,7 +305,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Aolkme\internal\Aolkme_core_private.h</PathWithFileName>
+      <PathWithFileName>..\AolkmeSDKProject\AOLKME\src\internal\Aolkme_core_private.h</PathWithFileName>
       <FilenameWithoutPath>Aolkme_core_private.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -317,7 +317,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Aolkme\internal\logger_buffer.h</PathWithFileName>
+      <PathWithFileName>..\AolkmeSDKProject\AolkmeComponent\AolkmeLogger\logger_buffer.h</PathWithFileName>
       <FilenameWithoutPath>logger_buffer.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -329,7 +329,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Aolkme\internal\logger_core.h</PathWithFileName>
+      <PathWithFileName>..\AolkmeSDKProject\AolkmeComponent\AolkmeLogger\logger_core.h</PathWithFileName>
       <FilenameWithoutPath>logger_core.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -341,7 +341,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Aolkme\internal\logger_formatter.h</PathWithFileName>
+      <PathWithFileName>..\AolkmeSDKProject\AolkmeComponent\AolkmeLogger\logger_formatter.h</PathWithFileName>
       <FilenameWithoutPath>logger_formatter.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -361,7 +361,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Aolkme\src\Aolkme.c</PathWithFileName>
+      <PathWithFileName>..\AolkmeSDKProject\AOLKME\src\code\Aolkme.c</PathWithFileName>
       <FilenameWithoutPath>Aolkme.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -373,7 +373,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Aolkme\src\Aolkme_core.c</PathWithFileName>
+      <PathWithFileName>..\AolkmeSDKProject\AOLKME\src\code\Aolkme_core.c</PathWithFileName>
       <FilenameWithoutPath>Aolkme_core.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -385,7 +385,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Aolkme\src\Aolkme_platform.c</PathWithFileName>
+      <PathWithFileName>..\AolkmeSDKProject\AOLKME\src\code\Aolkme_platform.c</PathWithFileName>
       <FilenameWithoutPath>Aolkme_platform.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -397,7 +397,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Aolkme\src\Aolkme_verify.c</PathWithFileName>
+      <PathWithFileName>..\AolkmeSDKProject\AOLKME\src\code\Aolkme_verify.c</PathWithFileName>
       <FilenameWithoutPath>Aolkme_verify.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -409,7 +409,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Aolkme\src\Aolkme_event.c</PathWithFileName>
+      <PathWithFileName>..\AolkmeSDKProject\AolkmeComponent\AolkmeEvent\src\Aolkme_event.c</PathWithFileName>
       <FilenameWithoutPath>Aolkme_event.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -421,7 +421,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Aolkme\src\logger_buffer.c</PathWithFileName>
+      <PathWithFileName>..\AolkmeSDKProject\AolkmeComponent\AolkmeLogger\logger_buffer.c</PathWithFileName>
       <FilenameWithoutPath>logger_buffer.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -433,7 +433,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Aolkme\src\logger_core.c</PathWithFileName>
+      <PathWithFileName>..\AolkmeSDKProject\AolkmeComponent\AolkmeLogger\logger_core.c</PathWithFileName>
       <FilenameWithoutPath>logger_core.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -445,7 +445,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Aolkme\src\logger_formatter.c</PathWithFileName>
+      <PathWithFileName>..\AolkmeSDKProject\AolkmeComponent\AolkmeLogger\logger_formatter.c</PathWithFileName>
       <FilenameWithoutPath>logger_formatter.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>

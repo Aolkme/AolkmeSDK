@@ -1,6 +1,6 @@
-.\objects\logger_formatter.o: Aolkme\src\logger_formatter.c
-.\objects\logger_formatter.o: .\Aolkme\internal\logger_formatter.h
-.\objects\logger_formatter.o: .\Aolkme\include\Aolkme_logger.h
+.\objects\logger_formatter.o: ..\AolkmeSDKProject\AolkmeComponent\AolkmeLogger\logger_formatter.c
+.\objects\logger_formatter.o: ..\AolkmeSDKProject\AolkmeComponent\AolkmeLogger\logger_formatter.h
+.\objects\logger_formatter.o: ..\AolkmeSDKProject\AolkmeComponent\AolkmeLogger\Aolkme_logger.h
 .\objects\logger_formatter.o: .\Aolkme\include\Aolkme_platform.h
 .\objects\logger_formatter.o: .\Aolkme\include\Aolkme_typedef.h
 .\objects\logger_formatter.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stdint.h
@@ -11,5 +11,5 @@
 .\objects\logger_formatter.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\logger_formatter.o: .\Aolkme\include\Aolkme_error.h
 .\objects\logger_formatter.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stdarg.h
-.\objects\logger_formatter.o: .\Aolkme\internal\logger_core.h
-.\objects\logger_formatter.o: .\Aolkme\internal\logger_buffer.h
+.\objects\logger_formatter.o: ..\AolkmeSDKProject\AolkmeComponent\AolkmeLogger\logger_core.h
+.\objects\logger_formatter.o: ..\AolkmeSDKProject\AolkmeComponent\AolkmeLogger\logger_buffer.h

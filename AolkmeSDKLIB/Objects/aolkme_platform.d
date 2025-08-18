@@ -1,4 +1,4 @@
-.\objects\aolkme_platform.o: Aolkme\src\Aolkme_platform.c
+.\objects\aolkme_platform.o: ..\AolkmeSDKProject\AOLKME\src\code\Aolkme_platform.c
 .\objects\aolkme_platform.o: .\Aolkme\include\Aolkme_platform.h
 .\objects\aolkme_platform.o: .\Aolkme\include\Aolkme_typedef.h
 .\objects\aolkme_platform.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stdint.h

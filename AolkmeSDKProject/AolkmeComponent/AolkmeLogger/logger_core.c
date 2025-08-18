@@ -32,6 +32,8 @@ T_AolkmeReturnCode AolkmeLogger_Init(const T_AolkmeLoggerConfig *config)
     g_aolkme_logger_state.global_level = config->level;
     g_aolkme_logger_state.color_enabled = config->isSupportColor;
 
+
+	
     T_AolkmeReturnCode returnCode;
     returnCode = AolkmeLogger_BufferInit(config->buffer_size);
     if (returnCode != AOLKME_ERROR_SYSTEM_MODULE_CODE_SUCCESS) {

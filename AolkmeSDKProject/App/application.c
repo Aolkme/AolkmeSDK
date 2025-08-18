@@ -60,6 +60,12 @@ void AolkmeUser_StartTask(void *arg)
         .GetRandomNum = A_Osal_GetRandomNum,
         .Malloc = Osal_Malloc,
         .Free = Osal_Free,
+        .QueueCreate = A_Osal_QueueCreate,
+        .QueueDestroy = A_Osal_QueueDestroy,
+        .QueueSend = A_Osal_QueueSend,
+        .QueueReceive = A_Osal_QueueReceive,
+        .QueueMessageCount = A_Osal_QueueMessageCount,
+        .QueueReset = A_Osal_QueueReset
     };
 
 

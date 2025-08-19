@@ -161,6 +161,7 @@ typedef struct
     T_AolkmeReturnCode (*SemaWait)(T_AolkmeSemaHandle semaphore);
     T_AolkmeReturnCode (*SemaTimedWait)(T_AolkmeSemaHandle semaphore, uint32_t waitTimeMs);
     T_AolkmeReturnCode (*SemaPost)(T_AolkmeSemaHandle semaphore);
+//	T_AolkmeReturnCode (*SemaPostFromISR)(T_AolkmeSemaHandle semaphore, int *pxHigherPriorityTaskWoken);
     T_AolkmeReturnCode (*GetTimeMs)(uint32_t *ms);
     T_AolkmeReturnCode (*GetTimeUs)(uint32_t *us);
     T_AolkmeReturnCode (*GetRandomNum)(uint16_t *randomNum);

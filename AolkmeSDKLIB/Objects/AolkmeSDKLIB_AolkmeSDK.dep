@@ -3,7 +3,7 @@ CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
 F (..\AolkmeSDKProject\AOLKME\include\Aolkme.h)(0x689EF03F)()
 F (..\AolkmeSDKProject\AOLKME\include\Aolkme_core.h)(0x689EE68A)()
 F (..\AolkmeSDKProject\AOLKME\include\Aolkme_error.h)(0x689D5F36)()
-F (..\AolkmeSDKProject\AOLKME\include\Aolkme_platform.h)(0x689F0EFB)()
+F (..\AolkmeSDKProject\AOLKME\include\Aolkme_platform.h)(0x68A4244D)()
 F (..\AolkmeSDKProject\AOLKME\include\Aolkme_typedef.h)(0x689C323A)()
 F (..\AolkmeSDKProject\AOLKME\include\Aolkme_version.h)(0x68957175)()
 F (..\AolkmeSDKProject\AolkmeComponent\AolkmeEvent\include\Aolkme_event.h)(0x689DB5BE)()
@@ -55,7 +55,7 @@ I (D:\WorkSoftware\Keil\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (.\Aolkme\include\Aolkme_error.h)(0x689D5F36)
 I (.\Aolkme\internal\Aolkme_core_private.h)(0x689EF219)
 I (.\Aolkme\include\Aolkme_core.h)(0x689EE68A)
-F (..\AolkmeSDKProject\AolkmeComponent\AolkmeLogger\logger_buffer.c)(0x689F0E74)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Aolkme\include -I .\Aolkme\internal -I .\Aolkme\src-ID:\WorkSoftware\Keil\armPack\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="536" -DSTM32F407xx-o .\objects\logger_buffer.o --omf_browse .\objects\logger_buffer.crf --depend .\objects\logger_buffer.d)
+F (..\AolkmeSDKProject\AolkmeComponent\AolkmeLogger\logger_buffer.c)(0x68A28B79)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Aolkme\include -I .\Aolkme\internal -I .\Aolkme\src-ID:\WorkSoftware\Keil\armPack\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="536" -DSTM32F407xx-o .\objects\logger_buffer.o --omf_browse .\objects\logger_buffer.crf --depend .\objects\logger_buffer.d)
 I (..\AolkmeSDKProject\AolkmeComponent\AolkmeLogger\logger_buffer.h)(0x689C3113)
 I (..\AolkmeSDKProject\AolkmeComponent\AolkmeLogger\Aolkme_logger.h)(0x689EDBC4)
 I (.\Aolkme\include\Aolkme_platform.h)(0x689F0EFB)
@@ -70,7 +70,7 @@ I (.\Aolkme\include\Aolkme_error.h)(0x689D5F36)
 I (..\AolkmeSDKProject\AolkmeComponent\AolkmeLogger\logger_core.h)(0x689B1436)
 I (.\Aolkme\internal\Aolkme_Core_Private.h)(0x689EF219)
 I (.\Aolkme\include\Aolkme_core.h)(0x689EE68A)
-F (..\AolkmeSDKProject\AolkmeComponent\AolkmeLogger\logger_core.c)(0x689F0C39)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Aolkme\include -I .\Aolkme\internal -I .\Aolkme\src-ID:\WorkSoftware\Keil\armPack\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="536" -DSTM32F407xx-o .\objects\logger_core.o --omf_browse .\objects\logger_core.crf --depend .\objects\logger_core.d)
+F (..\AolkmeSDKProject\AolkmeComponent\AolkmeLogger\logger_core.c)(0x68A28B79)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Aolkme\include -I .\Aolkme\internal -I .\Aolkme\src-ID:\WorkSoftware\Keil\armPack\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="536" -DSTM32F407xx-o .\objects\logger_core.o --omf_browse .\objects\logger_core.crf --depend .\objects\logger_core.d)
 I (..\AolkmeSDKProject\AolkmeComponent\AolkmeLogger\logger_core.h)(0x689B1436)
 I (..\AolkmeSDKProject\AolkmeComponent\AolkmeLogger\Aolkme_logger.h)(0x689EDBC4)
 I (.\Aolkme\include\Aolkme_platform.h)(0x689F0EFB)

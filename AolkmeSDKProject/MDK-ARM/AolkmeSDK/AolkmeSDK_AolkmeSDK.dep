@@ -128,7 +128,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x681E2D6B)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h)(0x681E2D1F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h)(0x681E2D1F)
 I (..\AolkmeComponent\AolkmeLogger\Aolkme_logger.h)(0x689EDBC4)
-I (../AOLKME/include/Aolkme_platform.h)(0x689F0EFB)
+I (../AOLKME/include/Aolkme_platform.h)(0x68A424E4)
 I (../AOLKME/include/Aolkme_typedef.h)(0x689C323A)
 I (D:\WorkSoftware\Keil\ARM\ARMCC\include\stdbool.h)(0x6025237C)
 I (D:\WorkSoftware\Keil\ARM\ARMCC\include\string.h)(0x6025237E)
@@ -968,13 +968,13 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x681E2D1F)
 F (..\AOLKME\include\Aolkme.h)(0x689EF03F)()
 F (..\AOLKME\include\Aolkme_core.h)(0x689EE68A)()
 F (..\AOLKME\include\Aolkme_error.h)(0x689D5F36)()
-F (..\AOLKME\include\Aolkme_platform.h)(0x689F0EFB)()
+F (..\AOLKME\include\Aolkme_platform.h)(0x68A424E4)()
 F (..\AOLKME\include\Aolkme_typedef.h)(0x689C323A)()
 F (..\AOLKME\include\Aolkme_version.h)(0x68957175)()
 F (..\AOLKME\src\code\Aolkme_core.c)(0x689EF228)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../AolkmeComponent/AolkmeOSAL/src -I ../AolkmeComponent/AolkmeOSAL/include -I ../AOLKME/include -I ..\AOLKME\src\code -I ..\AOLKME\src\internal -I ../AolkmeComponent/AolkmeEvent/include -I ../AolkmeComponent/AolkmeEvent/src -I ../App -I ..\AolkmeComponent\Aolkmemisc -I ..\AolkmeComponent\AolkmeLogger -I ..\AolkmeComponent\AolkmeOSAL_SystemMonitor-I.\RTE\_AolkmeSDK-ID:\WorkSoftware\Keil\armPack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\WorkSoftware\Keil\armPack\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DSTM32_THREAD_SAFE_STRATEGY="4"-o aolkmesdk\aolkme_core.o --omf_browse aolkmesdk\aolkme_core.crf --depend aolkmesdk\aolkme_core.d)
 I (..\AOLKME\src\internal\Aolkme_core_private.h)(0x689EF219)
 I (../AOLKME/include/Aolkme_core.h)(0x689EE68A)
-I (../AOLKME/include/Aolkme_platform.h)(0x689F0EFB)
+I (../AOLKME/include/Aolkme_platform.h)(0x68A424E4)
 I (../AOLKME/include/Aolkme_typedef.h)(0x689C323A)
 I (D:\WorkSoftware\Keil\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (D:\WorkSoftware\Keil\ARM\ARMCC\include\stdbool.h)(0x6025237C)
@@ -984,7 +984,7 @@ I (D:\WorkSoftware\Keil\ARM\ARMCC\include\stdlib.h)(0x60252374)
 I (D:\WorkSoftware\Keil\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (../AOLKME/include/Aolkme_error.h)(0x689D5F36)
 F (..\AOLKME\src\code\Aolkme_platform.c)(0x6899849F)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../AolkmeComponent/AolkmeOSAL/src -I ../AolkmeComponent/AolkmeOSAL/include -I ../AOLKME/include -I ..\AOLKME\src\code -I ..\AOLKME\src\internal -I ../AolkmeComponent/AolkmeEvent/include -I ../AolkmeComponent/AolkmeEvent/src -I ../App -I ..\AolkmeComponent\Aolkmemisc -I ..\AolkmeComponent\AolkmeLogger -I ..\AolkmeComponent\AolkmeOSAL_SystemMonitor-I.\RTE\_AolkmeSDK-ID:\WorkSoftware\Keil\armPack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\WorkSoftware\Keil\armPack\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DSTM32_THREAD_SAFE_STRATEGY="4"-o aolkmesdk\aolkme_platform.o --omf_browse aolkmesdk\aolkme_platform.crf --depend aolkmesdk\aolkme_platform.d)
-I (../AOLKME/include/Aolkme_platform.h)(0x689F0EFB)
+I (../AOLKME/include/Aolkme_platform.h)(0x68A424E4)
 I (../AOLKME/include/Aolkme_typedef.h)(0x689C323A)
 I (D:\WorkSoftware\Keil\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (D:\WorkSoftware\Keil\ARM\ARMCC\include\stdbool.h)(0x6025237C)
@@ -1002,7 +1002,7 @@ F (..\AolkmeComponent\AolkmeOSAL\include\Aolkme_OSAL.h)(0x689DA648)()
 F (..\AolkmeComponent\AolkmeOSAL\src\Aolkme_OSAL.c)(0x689DA660)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../AolkmeComponent/AolkmeOSAL/src -I ../AolkmeComponent/AolkmeOSAL/include -I ../AOLKME/include -I ..\AOLKME\src\code -I ..\AOLKME\src\internal -I ../AolkmeComponent/AolkmeEvent/include -I ../AolkmeComponent/AolkmeEvent/src -I ../App -I ..\AolkmeComponent\Aolkmemisc -I ..\AolkmeComponent\AolkmeLogger -I ..\AolkmeComponent\AolkmeOSAL_SystemMonitor-I.\RTE\_AolkmeSDK-ID:\WorkSoftware\Keil\armPack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\WorkSoftware\Keil\armPack\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DSTM32_THREAD_SAFE_STRATEGY="4"-o aolkmesdk\aolkme_osal.o --omf_browse aolkmesdk\aolkme_osal.crf --depend aolkmesdk\aolkme_osal.d)
 I (D:\WorkSoftware\Keil\ARM\ARMCC\include\limits.h)(0x60252376)
 I (../AolkmeComponent/AolkmeOSAL/include/Aolkme_OSAL.h)(0x689DA648)
-I (../AOLKME/include/Aolkme_platform.h)(0x689F0EFB)
+I (../AOLKME/include/Aolkme_platform.h)(0x68A424E4)
 I (../AOLKME/include/Aolkme_typedef.h)(0x689C323A)
 I (D:\WorkSoftware\Keil\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (D:\WorkSoftware\Keil\ARM\ARMCC\include\stdbool.h)(0x6025237C)
@@ -1026,7 +1026,7 @@ F (..\AolkmeComponent\AolkmeEvent\include\Aolkme_event_types.h)(0x689EF5AC)()
 F (..\AolkmeComponent\AolkmeEvent\include\Aolkme_event.h)(0x689DB5BE)()
 F (..\AolkmeComponent\AolkmeEvent\src\Aolkme_event.c)(0x689EEC03)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../AolkmeComponent/AolkmeOSAL/src -I ../AolkmeComponent/AolkmeOSAL/include -I ../AOLKME/include -I ..\AOLKME\src\code -I ..\AOLKME\src\internal -I ../AolkmeComponent/AolkmeEvent/include -I ../AolkmeComponent/AolkmeEvent/src -I ../App -I ..\AolkmeComponent\Aolkmemisc -I ..\AolkmeComponent\AolkmeLogger -I ..\AolkmeComponent\AolkmeOSAL_SystemMonitor-I.\RTE\_AolkmeSDK-ID:\WorkSoftware\Keil\armPack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\WorkSoftware\Keil\armPack\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DSTM32_THREAD_SAFE_STRATEGY="4"-o aolkmesdk\aolkme_event.o --omf_browse aolkmesdk\aolkme_event.crf --depend aolkmesdk\aolkme_event.d)
 I (../AolkmeComponent/AolkmeEvent/include/Aolkme_event.h)(0x689DB5BE)
-I (../AOLKME/include/Aolkme_platform.h)(0x689F0EFB)
+I (../AOLKME/include/Aolkme_platform.h)(0x68A424E4)
 I (../AOLKME/include/Aolkme_typedef.h)(0x689C323A)
 I (D:\WorkSoftware\Keil\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (D:\WorkSoftware\Keil\ARM\ARMCC\include\stdbool.h)(0x6025237C)
@@ -1041,10 +1041,10 @@ F (..\AolkmeComponent\Aolkmemisc\Aolkme_misc.c)(0x689AB35F)(--c99 -c --cpu Corte
 I (..\AolkmeComponent\Aolkmemisc\Aolkme_misc.h)(0x689AB437)
 F (..\AolkmeComponent\Aolkmemisc\Aolkme_misc.h)(0x689AB437)()
 F (..\AolkmeComponent\AolkmeLogger\Aolkme_logger.h)(0x689EDBC4)()
-F (..\AolkmeComponent\AolkmeLogger\logger_buffer.c)(0x68A28A1D)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../AolkmeComponent/AolkmeOSAL/src -I ../AolkmeComponent/AolkmeOSAL/include -I ../AOLKME/include -I ..\AOLKME\src\code -I ..\AOLKME\src\internal -I ../AolkmeComponent/AolkmeEvent/include -I ../AolkmeComponent/AolkmeEvent/src -I ../App -I ..\AolkmeComponent\Aolkmemisc -I ..\AolkmeComponent\AolkmeLogger -I ..\AolkmeComponent\AolkmeOSAL_SystemMonitor-I.\RTE\_AolkmeSDK-ID:\WorkSoftware\Keil\armPack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\WorkSoftware\Keil\armPack\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DSTM32_THREAD_SAFE_STRATEGY="4"-o aolkmesdk\logger_buffer.o --omf_browse aolkmesdk\logger_buffer.crf --depend aolkmesdk\logger_buffer.d)
+F (..\AolkmeComponent\AolkmeLogger\logger_buffer.c)(0x68A28B79)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../AolkmeComponent/AolkmeOSAL/src -I ../AolkmeComponent/AolkmeOSAL/include -I ../AOLKME/include -I ..\AOLKME\src\code -I ..\AOLKME\src\internal -I ../AolkmeComponent/AolkmeEvent/include -I ../AolkmeComponent/AolkmeEvent/src -I ../App -I ..\AolkmeComponent\Aolkmemisc -I ..\AolkmeComponent\AolkmeLogger -I ..\AolkmeComponent\AolkmeOSAL_SystemMonitor-I.\RTE\_AolkmeSDK-ID:\WorkSoftware\Keil\armPack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\WorkSoftware\Keil\armPack\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DSTM32_THREAD_SAFE_STRATEGY="4"-o aolkmesdk\logger_buffer.o --omf_browse aolkmesdk\logger_buffer.crf --depend aolkmesdk\logger_buffer.d)
 I (..\AolkmeComponent\AolkmeLogger\logger_buffer.h)(0x689C3113)
 I (..\AolkmeComponent\AolkmeLogger\Aolkme_logger.h)(0x689EDBC4)
-I (../AOLKME/include/Aolkme_platform.h)(0x689F0EFB)
+I (../AOLKME/include/Aolkme_platform.h)(0x68A424E4)
 I (../AOLKME/include/Aolkme_typedef.h)(0x689C323A)
 I (D:\WorkSoftware\Keil\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (D:\WorkSoftware\Keil\ARM\ARMCC\include\stdbool.h)(0x6025237C)
@@ -1057,10 +1057,10 @@ I (..\AolkmeComponent\AolkmeLogger\logger_core.h)(0x689B1436)
 I (..\AOLKME\src\internal\Aolkme_Core_Private.h)(0x689EF219)
 I (../AOLKME/include/Aolkme_core.h)(0x689EE68A)
 F (..\AolkmeComponent\AolkmeLogger\logger_buffer.h)(0x689C3113)()
-F (..\AolkmeComponent\AolkmeLogger\logger_core.c)(0x68A28A1D)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../AolkmeComponent/AolkmeOSAL/src -I ../AolkmeComponent/AolkmeOSAL/include -I ../AOLKME/include -I ..\AOLKME\src\code -I ..\AOLKME\src\internal -I ../AolkmeComponent/AolkmeEvent/include -I ../AolkmeComponent/AolkmeEvent/src -I ../App -I ..\AolkmeComponent\Aolkmemisc -I ..\AolkmeComponent\AolkmeLogger -I ..\AolkmeComponent\AolkmeOSAL_SystemMonitor-I.\RTE\_AolkmeSDK-ID:\WorkSoftware\Keil\armPack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\WorkSoftware\Keil\armPack\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DSTM32_THREAD_SAFE_STRATEGY="4"-o aolkmesdk\logger_core.o --omf_browse aolkmesdk\logger_core.crf --depend aolkmesdk\logger_core.d)
+F (..\AolkmeComponent\AolkmeLogger\logger_core.c)(0x68A28B79)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../AolkmeComponent/AolkmeOSAL/src -I ../AolkmeComponent/AolkmeOSAL/include -I ../AOLKME/include -I ..\AOLKME\src\code -I ..\AOLKME\src\internal -I ../AolkmeComponent/AolkmeEvent/include -I ../AolkmeComponent/AolkmeEvent/src -I ../App -I ..\AolkmeComponent\Aolkmemisc -I ..\AolkmeComponent\AolkmeLogger -I ..\AolkmeComponent\AolkmeOSAL_SystemMonitor-I.\RTE\_AolkmeSDK-ID:\WorkSoftware\Keil\armPack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\WorkSoftware\Keil\armPack\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DSTM32_THREAD_SAFE_STRATEGY="4"-o aolkmesdk\logger_core.o --omf_browse aolkmesdk\logger_core.crf --depend aolkmesdk\logger_core.d)
 I (..\AolkmeComponent\AolkmeLogger\logger_core.h)(0x689B1436)
 I (..\AolkmeComponent\AolkmeLogger\Aolkme_logger.h)(0x689EDBC4)
-I (../AOLKME/include/Aolkme_platform.h)(0x689F0EFB)
+I (../AOLKME/include/Aolkme_platform.h)(0x68A424E4)
 I (../AOLKME/include/Aolkme_typedef.h)(0x689C323A)
 I (D:\WorkSoftware\Keil\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (D:\WorkSoftware\Keil\ARM\ARMCC\include\stdbool.h)(0x6025237C)
@@ -1076,7 +1076,7 @@ F (..\AolkmeComponent\AolkmeLogger\logger_core.h)(0x689B1436)()
 F (..\AolkmeComponent\AolkmeLogger\logger_formatter.c)(0x689C55B0)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../AolkmeComponent/AolkmeOSAL/src -I ../AolkmeComponent/AolkmeOSAL/include -I ../AOLKME/include -I ..\AOLKME\src\code -I ..\AOLKME\src\internal -I ../AolkmeComponent/AolkmeEvent/include -I ../AolkmeComponent/AolkmeEvent/src -I ../App -I ..\AolkmeComponent\Aolkmemisc -I ..\AolkmeComponent\AolkmeLogger -I ..\AolkmeComponent\AolkmeOSAL_SystemMonitor-I.\RTE\_AolkmeSDK-ID:\WorkSoftware\Keil\armPack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\WorkSoftware\Keil\armPack\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DSTM32_THREAD_SAFE_STRATEGY="4"-o aolkmesdk\logger_formatter.o --omf_browse aolkmesdk\logger_formatter.crf --depend aolkmesdk\logger_formatter.d)
 I (..\AolkmeComponent\AolkmeLogger\logger_formatter.h)(0x689C2104)
 I (..\AolkmeComponent\AolkmeLogger\Aolkme_logger.h)(0x689EDBC4)
-I (../AOLKME/include/Aolkme_platform.h)(0x689F0EFB)
+I (../AOLKME/include/Aolkme_platform.h)(0x68A424E4)
 I (../AOLKME/include/Aolkme_typedef.h)(0x689C323A)
 I (D:\WorkSoftware\Keil\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (D:\WorkSoftware\Keil\ARM\ARMCC\include\stdbool.h)(0x6025237C)
@@ -1092,7 +1092,7 @@ F (..\AolkmeComponent\AolkmeLogger\logger_formatter.h)(0x689C2104)()
 F (..\AolkmeComponent\AolkmeOSAL_SystemMonitor\AolkmeOSAL_SysMon.h)(0x689EF717)()
 F (..\AolkmeComponent\AolkmeOSAL_SystemMonitor\AolkmeOSAL_SysMon_freertos.c)(0x689EFB72)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../AolkmeComponent/AolkmeOSAL/src -I ../AolkmeComponent/AolkmeOSAL/include -I ../AOLKME/include -I ..\AOLKME\src\code -I ..\AOLKME\src\internal -I ../AolkmeComponent/AolkmeEvent/include -I ../AolkmeComponent/AolkmeEvent/src -I ../App -I ..\AolkmeComponent\Aolkmemisc -I ..\AolkmeComponent\AolkmeLogger -I ..\AolkmeComponent\AolkmeOSAL_SystemMonitor-I.\RTE\_AolkmeSDK-ID:\WorkSoftware\Keil\armPack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\WorkSoftware\Keil\armPack\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DSTM32_THREAD_SAFE_STRATEGY="4"-o aolkmesdk\aolkmeosal_sysmon_freertos.o --omf_browse aolkmesdk\aolkmeosal_sysmon_freertos.crf --depend aolkmesdk\aolkmeosal_sysmon_freertos.d)
 I (..\AolkmeComponent\AolkmeOSAL_SystemMonitor\AolkmeOSAL_SysMon.h)(0x689EF717)
-I (../AOLKME/include/Aolkme_platform.h)(0x689F0EFB)
+I (../AOLKME/include/Aolkme_platform.h)(0x68A424E4)
 I (../AOLKME/include/Aolkme_typedef.h)(0x689C323A)
 I (D:\WorkSoftware\Keil\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (D:\WorkSoftware\Keil\ARM\ARMCC\include\stdbool.h)(0x6025237C)
@@ -1118,7 +1118,7 @@ I (D:\WorkSoftware\Keil\ARM\ARMCC\include\stdio.h)(0x60252374)
 F (..\App\application.c)(0x68A28B31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../AolkmeComponent/AolkmeOSAL/src -I ../AolkmeComponent/AolkmeOSAL/include -I ../AOLKME/include -I ..\AOLKME\src\code -I ..\AOLKME\src\internal -I ../AolkmeComponent/AolkmeEvent/include -I ../AolkmeComponent/AolkmeEvent/src -I ../App -I ..\AolkmeComponent\Aolkmemisc -I ..\AolkmeComponent\AolkmeLogger -I ..\AolkmeComponent\AolkmeOSAL_SystemMonitor-I.\RTE\_AolkmeSDK-ID:\WorkSoftware\Keil\armPack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\WorkSoftware\Keil\armPack\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DSTM32_THREAD_SAFE_STRATEGY="4"-o aolkmesdk\application.o --omf_browse aolkmesdk\application.crf --depend aolkmesdk\application.d)
 I (..\App\application.h)(0x6899A86D)
 I (../AolkmeComponent/AolkmeOSAL/include/Aolkme_OSAL.h)(0x689DA648)
-I (../AOLKME/include/Aolkme_platform.h)(0x689F0EFB)
+I (../AOLKME/include/Aolkme_platform.h)(0x68A424E4)
 I (../AOLKME/include/Aolkme_typedef.h)(0x689C323A)
 I (D:\WorkSoftware\Keil\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (D:\WorkSoftware\Keil\ARM\ARMCC\include\stdbool.h)(0x6025237C)

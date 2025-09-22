@@ -115,38 +115,78 @@ T_AolkmeReturnCode A_Osal_SystemMonitorGetTaskList(T_AolkmeTaskStatus *tasks, ui
 }
 
 
+#if 0
+/**
+ * @brief 
+ * 
+ * @param pvParameters 
+ */
 static void AolkmeMonitorTask(void *pvParameters)
 {
     while (1) {
         T_AolkmeSystemResource res;
         A_Osal_SystemMonitorGetResource(&res);
 
-        // 创建监控报告事件
-        T_AolkmeEvent monitorEvent;
-        T_AolkmeMonitorReport *report = pvPortMalloc(sizeof(T_AolkmeMonitorReport));
-        
+        printf("[SysMon] Heap Free: %u, Min Ever: %u, Task Count: %u\n",
+               res.freeHeapBytes, res.minEverFreeHeapBytes, res.taskCount);
+
+        T_AolkmeTaskStatus *tasks = pvPortMalloc(res.taskCount * sizeof(T_AolkmeTaskStatus));
+        if (tasks) {
+            uint32_t count = res.taskCount;
+            A_Osal_SystemMonitorGetTaskList(tasks, &count);
+            for (uint32_t i = 0; i < count; i++) {
+                printf("Task: %-16s Pri: %u Stack: %u Free: %u CPU: %u%% State: %s Runtime: %lu ticks\n",
+                       tasks[i].taskName,
+                       tasks[i].priority,
+                       tasks[i].stackTotalWords,
+                       tasks[i].stackFreeWords,
+                       tasks[i].cpuUsagePercent,
+                       stateToStr(tasks[i].taskState),
+                       (unsigned long)tasks[i].runTimeTicks);
+            }
+            vPortFree(tasks);
+        }
+
+        vTaskDelay(monitorPeriodTicks);
+    }
+}
+
+#else
+/**
+ * @brief System Monitor Task - publish system snapshot as event
+ */
+static void AolkmeMonitorTask(void *pvParameters)
+{
+    while (1) {
+        T_AolkmeSystemResource res;
+        A_Osal_SystemMonitorGetResource(&res);
+
+        // 计算一次性分配所需大小
+        size_t totalSize = sizeof(T_AolkmeMonitorReport) + res.taskCount * sizeof(T_AolkmeTaskStatus);
+        T_AolkmeMonitorReport *report = pvPortMalloc(totalSize);
         if (report) {
+            memset(report, 0, totalSize);
             report->resource = res;
             report->taskCount = res.taskCount;
-            report->tasks = pvPortMalloc(res.taskCount * sizeof(T_AolkmeTaskStatus));
-            
-            if (report->tasks) {
-                uint32_t count = res.taskCount;
-                if (A_Osal_SystemMonitorGetTaskList(report->tasks, &count) == 
-                    AOLKME_ERROR_SYSTEM_MODULE_CODE_SUCCESS) {
-                    
-                    // 设置事件参数
-                    monitorEvent.ID = AOLKME_EVENT_SYSTEM_MONITOR_REPORT;
-                    monitorEvent.source = NULL;
-                    monitorEvent.data = report;
-                    monitorEvent.data_size = sizeof(T_AolkmeMonitorReport);
-                    monitorEvent.name = "SystemMonitorReport";
-                    monitorEvent.flags = EVENT_FLAG_DYNAMIC_DATA; // 标记数据需要释放
-                    
-                    // 发布事件
-                    AolkmeEvent_PublishEvent(&monitorEvent);
-                } else {
-                    vPortFree(report->tasks);
+            report->tasks = (T_AolkmeTaskStatus *)(report + 1); // 指向紧随其后的数组
+
+            uint32_t count = res.taskCount;
+            if (A_Osal_SystemMonitorGetTaskList(report->tasks, &count) == 
+                AOLKME_ERROR_SYSTEM_MODULE_CODE_SUCCESS) 
+            {
+                // 构造事件
+                T_AolkmeEvent monitorEvent;
+                monitorEvent.ID        = AOLKME_EVENT_SYSTEM_MONITOR_REPORT;
+                monitorEvent.timestamp = (uint32_t)(xTaskGetTickCount() * portTICK_PERIOD_MS);
+                monitorEvent.source    = NULL;
+                monitorEvent.data      = report;
+                monitorEvent.data_size = totalSize;
+                monitorEvent.name      = "SystemMonitorReport";
+                monitorEvent.flags     = EVENT_FLAG_DYNAMIC_DATA;  // 标记需要释放
+
+                // 发布事件
+                if (AolkmeEvent_PublishEvent(&monitorEvent) != AOLKME_ERROR_SYSTEM_MODULE_CODE_SUCCESS) {
+                    // 发布失败，手动释放
                     vPortFree(report);
                 }
             } else {
@@ -158,57 +198,25 @@ static void AolkmeMonitorTask(void *pvParameters)
     }
 }
 
-
-///**
-// * @brief 
-// * 
-// * @param pvParameters 
-// */
-//static void AolkmeMonitorTask(void *pvParameters)
-//{
-//    while (1) {
-//        T_AolkmeSystemResource res;
-//        A_Osal_SystemMonitorGetResource(&res);
-
-//        printf("[SysMon] Heap Free: %u, Min Ever: %u, Task Count: %u\n",
-//               res.freeHeapBytes, res.minEverFreeHeapBytes, res.taskCount);
-
-//        T_AolkmeTaskStatus *tasks = pvPortMalloc(res.taskCount * sizeof(T_AolkmeTaskStatus));
-//        if (tasks) {
-//            uint32_t count = res.taskCount;
-//            A_Osal_SystemMonitorGetTaskList(tasks, &count);
-//            for (uint32_t i = 0; i < count; i++) {
-//                printf("Task: %-16s Pri: %u Stack: %u Free: %u CPU: %u%% State: %s Runtime: %lu ticks\n",
-//                       tasks[i].taskName,
-//                       tasks[i].priority,
-//                       tasks[i].stackTotalWords,
-//                       tasks[i].stackFreeWords,
-//                       tasks[i].cpuUsagePercent,
-//                       stateToStr(tasks[i].taskState),
-//                       (unsigned long)tasks[i].runTimeTicks);
-//            }
-//            vPortFree(tasks);
-//        }
-
-//        vTaskDelay(monitorPeriodTicks);
-//    }
-//}
+#endif
 
 
 
 
 
-// 监控事件处理回调函数
+
+
+
 void SystemMonitorEventHandler(T_AolkmeEvent event)
 {
     if (event.ID == AOLKME_EVENT_SYSTEM_MONITOR_REPORT) {
         T_AolkmeMonitorReport *report = (T_AolkmeMonitorReport *)event.data;
-        
+
         printf("[SysMon] Heap Free: %u, Min Ever: %u, Task Count: %u\n",
-               report->resource.freeHeapBytes, 
-               report->resource.minEverFreeHeapBytes, 
-               report->resource.taskCount);
-        
+               report->resource.freeHeapBytes,
+               report->resource.minEverFreeHeapBytes,
+               report->taskCount);
+
         for (uint32_t i = 0; i < report->taskCount; i++) {
             printf("Task: %-16s Pri: %u, Stack: %u Free: %u, CPU: %u%%, State: %s\n",
                    report->tasks[i].taskName,
@@ -216,10 +224,14 @@ void SystemMonitorEventHandler(T_AolkmeEvent event)
                    report->tasks[i].stackTotalWords,
                    report->tasks[i].stackFreeWords,
                    report->tasks[i].cpuUsagePercent,
-                   stateToStr(report->tasks[i].taskState));
+                   //(int)report->tasks[i].taskState,
+					stateToStr(report->tasks[i].taskState));
         }
+
+        // ⚠️ 注意：这里不需要 vPortFree，事件系统会在分发完成后自动释放
     }
 }
+
 
 
 
@@ -235,10 +247,10 @@ T_AolkmeReturnCode A_Osal_SystemMonitorStart(void) {
     if (monitorTaskHandle != NULL) {
         return AOLKME_ERROR_SYSTEM_MODULE_CODE_UNKNOWN;
     }
-    if (xTaskCreate(AolkmeMonitorTask, "SysMon", 1024, NULL, tskIDLE_PRIORITY + 1, &monitorTaskHandle) != pdPASS) {
+    if (xTaskCreate(AolkmeMonitorTask, "SysMon", 128, NULL, tskIDLE_PRIORITY + 1, &monitorTaskHandle) != pdPASS) {
         return AOLKME_ERROR_SYSTEM_MODULE_CODE_UNKNOWN;
     }
-    A_Osal_RegisterTaskStackSize(monitorTaskHandle, 1024);
+    A_Osal_RegisterTaskStackSize(monitorTaskHandle, 128);
     return AOLKME_ERROR_SYSTEM_MODULE_CODE_SUCCESS;
 }
 

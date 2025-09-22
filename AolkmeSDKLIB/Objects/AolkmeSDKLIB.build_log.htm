@@ -22,15 +22,31 @@ Dialog DLL:      TCM.DLL V1.53.0.0
  
 <h2>Project:</h2>
 E:\GItHub-Project\Aolkme\AolkmeSDK\AolkmeSDKLIB\AolkmeSDKLIB.uvprojx
-Project File Date:  08/18/2025
+Project File Date:  08/25/2025
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\WorkSoftware\Keil\ARM\ARMCC\Bin'
-Build target 'AolkmeSDK'
+Rebuild target 'AolkmeSDK'
+compiling Aolkme_core.c...
+..\AolkmeSDKProject\AOLKME\src\code\Aolkme_core.c(27): warning:  #177-D: variable "appId"  was declared but never referenced
+  static const char appId[16] = "AolkmeSDKadmin";       
+..\AolkmeSDKProject\AOLKME\src\code\Aolkme_core.c(28): warning:  #177-D: variable "AppKey"  was declared but never referenced
+  static const char AppKey[32] = "AK17WIZJENEY2WKTZVLMF4FG2FJI3";
+..\AolkmeSDKProject\AOLKME\src\code\Aolkme_core.c: 2 warnings, 0 errors
+compiling Aolkme.c...
 compiling logger_core.c...
+compiling Aolkme_platform.c...
+..\AolkmeSDKProject\AOLKME\src\code\Aolkme_platform.c(14): warning:  #177-D: variable "g_halUartHandler"  was declared but never referenced
+  static T_AolkmeHalUartHandler *g_halUartHandler = NULL;
+..\AolkmeSDKProject\AOLKME\src\code\Aolkme_platform.c(15): warning:  #177-D: variable "g_halI2cHandler"  was declared but never referenced
+  static T_AolkmeHalI2cHandler *g_halI2cHandler = NULL;
+..\AolkmeSDKProject\AOLKME\src\code\Aolkme_platform.c: 2 warnings, 0 errors
+compiling logger_formatter.c...
+compiling Aolkme_verify.c...
 compiling logger_buffer.c...
+compiling Aolkme_event.c...
 creating Library...
-".\Objects\AolkmeSDKLIB.lib" - 0 Error(s), 0 Warning(s).
+".\Objects\AolkmeSDKLIB.lib" - 0 Error(s), 4 Warning(s).
 
 <h2>Software Packages used:</h2>
 

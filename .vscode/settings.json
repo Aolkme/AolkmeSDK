@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "*.c": "c",
+        "bootservice.h": "c",
+        "aolkme_platform.h": "c",
+        "aolkme_uart.h": "c",
+        "aolkme_osal.h": "c",
+        "compare": "c",
+        "uart.h": "c"
+    }
+}

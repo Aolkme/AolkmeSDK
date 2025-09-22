@@ -1,0 +1,16 @@
+bootloader\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/tasks.c
+bootloader\tasks.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
+bootloader\tasks.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\string.h
+bootloader\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+bootloader\tasks.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stddef.h
+bootloader\tasks.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+bootloader\tasks.o: ../Core/Inc/FreeRTOSConfig.h
+bootloader\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+bootloader\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+bootloader\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+bootloader\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+bootloader\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+bootloader\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+bootloader\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+bootloader\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
+bootloader\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/stack_macros.h

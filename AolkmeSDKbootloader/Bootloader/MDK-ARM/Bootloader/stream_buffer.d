@@ -1,0 +1,14 @@
+bootloader\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c
+bootloader\stream_buffer.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+bootloader\stream_buffer.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\string.h
+bootloader\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+bootloader\stream_buffer.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stddef.h
+bootloader\stream_buffer.o: ../Core/Inc/FreeRTOSConfig.h
+bootloader\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+bootloader\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+bootloader\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+bootloader\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+bootloader\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+bootloader\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+bootloader\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+bootloader\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/stream_buffer.h

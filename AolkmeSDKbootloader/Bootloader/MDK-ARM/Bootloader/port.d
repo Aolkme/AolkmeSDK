@@ -1,0 +1,12 @@
+bootloader\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/port.c
+bootloader\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+bootloader\port.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stddef.h
+bootloader\port.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+bootloader\port.o: ../Core/Inc/FreeRTOSConfig.h
+bootloader\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+bootloader\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+bootloader\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+bootloader\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+bootloader\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+bootloader\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+bootloader\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h

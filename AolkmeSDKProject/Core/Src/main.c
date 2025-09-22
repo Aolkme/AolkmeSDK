@@ -68,6 +68,9 @@ int fputc(int ch, FILE *f)
  
 }
 
+
+#define APP_BASE_ADDRESS 0x08010000
+
 /* USER CODE END 0 */
 
 /**
@@ -78,7 +81,7 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-
+	SCB->VTOR = APP_BASE_ADDRESS;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/

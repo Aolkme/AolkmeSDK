@@ -7,8 +7,8 @@
 //#include "cmsis_os.h"
 
 #include "Button.h"
-
-
+#include "uart.h"
+#include "BIOS_menu.h"
 
 typedef void (*pFunction)(void);
 
@@ -24,6 +24,9 @@ void *BootService_Task(void *arg);
 
 T_AolkmeReturnCode BootServiceStart(void)
 {
+	
+	UART_Init(Aolkme_CONSOLE_UART_NUM, Aolkme_CONSOLE_UART_BAUD);
+	
 	A_Osal_TaskCreate("BootServiceTask", BootService_Task, 512, NULL, &BootServiceTaskHandle);
 	
 	return 0;
@@ -37,26 +40,30 @@ T_AolkmeReturnCode BootServiceStart(void)
 #define APPLICATION_ADDRESS		((uint32_t)0x08010000)
 
 
-void JumpToApp(void);
+
 
 
 void *BootService_Task(void *arg)
 {
-    A_Osal_TaskSleepMs(3000);
+    A_Osal_TaskSleepMs(500);
 
-    // Check if it has entered BIOS, by using the buttons.
+	
+	Show_BIOS_Menu();
+	
+	
+	
     if (Check_BIOS() == 1)
     {
-        
+        Show_BIOS_Menu();
     }
 
-    JumpToApp();
+    //JumpToApp();
 
 	CCMRAM static uint8_t App;
 	
 	for (;;)
 	{
-		HAL_GPIO_TogglePin(GPIOF, GPIO_PIN_10);
+		// HAL_GPIO_TogglePin(GPIOF, GPIO_PIN_10);
 		A_Osal_TaskSleepMs(100);
 	}
 	

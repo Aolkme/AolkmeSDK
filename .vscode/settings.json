@@ -6,6 +6,10 @@
         "aolkme_uart.h": "c",
         "aolkme_osal.h": "c",
         "compare": "c",
-        "uart.h": "c"
+        "uart.h": "c",
+        "stm32f4xx_hal.h": "c",
+        "ymodem.h": "c",
+        "stdint.h": "c",
+        "string.h": "c"
     }
 }

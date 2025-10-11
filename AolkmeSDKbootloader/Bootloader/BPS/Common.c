@@ -12,7 +12,7 @@
  * @param p_str Pointer to the output string buffer.
  * @param intnum The integer to convert.
  */
-void In2Str(uint8_t *p_str, uint32_t intnum)
+void Int2Str(uint8_t *p_str, uint32_t intnum)
 {
     uint32_t i, divider = 1000000000, pos = 0, leading_zero = 1;
     for (i = 0; i < 10; i++)

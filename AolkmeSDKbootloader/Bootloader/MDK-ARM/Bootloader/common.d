@@ -33,3 +33,4 @@ bootloader\common.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 bootloader\common.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 bootloader\common.o: ../Core/Inc/main.h
 bootloader\common.o: ..\BPS\uart.h
+bootloader\common.o: ../Core/Inc/usart.h

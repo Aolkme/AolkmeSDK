@@ -1,28 +1,79 @@
+/**
+  ******************************************************************************
+  * @file    IAP/IAP_Main/Src/flash_if.c 
+  * @author  MCD Application Team
+  * @brief   This file provides all the memory related operation functions.
+  ******************************************************************************
+  * @attention
+  *
+  * <h2><center>&copy; Copyright (c) 2017 STMicroelectronics International N.V. 
+  * All rights reserved.</center></h2>
+  *
+  * Redistribution and use in source and binary forms, with or without 
+  * modification, are permitted, provided that the following conditions are met:
+  *
+  * 1. Redistribution of source code must retain the above copyright notice, 
+  *    this list of conditions and the following disclaimer.
+  * 2. Redistributions in binary form must reproduce the above copyright notice,
+  *    this list of conditions and the following disclaimer in the documentation
+  *    and/or other materials provided with the distribution.
+  * 3. Neither the name of STMicroelectronics nor the names of other 
+  *    contributors to this software may be used to endorse or promote products 
+  *    derived from this software without specific written permission.
+  * 4. This software, including modifications and/or derivative works of this 
+  *    software, must execute solely and exclusively on microcontroller or
+  *    microprocessor devices manufactured by or for STMicroelectronics.
+  * 5. Redistribution and use of this software other than as permitted under 
+  *    this license is void and will automatically terminate your rights under 
+  *    this license. 
+  *
+  * THIS SOFTWARE IS PROVIDED BY STMICROELECTRONICS AND CONTRIBUTORS "AS IS" 
+  * AND ANY EXPRESS, IMPLIED OR STATUTORY WARRANTIES, INCLUDING, BUT NOT 
+  * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
+  * PARTICULAR PURPOSE AND NON-INFRINGEMENT OF THIRD PARTY INTELLECTUAL PROPERTY
+  * RIGHTS ARE DISCLAIMED TO THE FULLEST EXTENT PERMITTED BY LAW. IN NO EVENT 
+  * SHALL STMICROELECTRONICS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+  * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, 
+  * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF 
+  * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING 
+  * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  *
+  * @statement DJI has modified some symbols' name.
+  *
+  ******************************************************************************
+  */
+
+/** @addtogroup STM32F4xx_IAP_Main
+  * @{
+  */
+
+/* Includes ------------------------------------------------------------------*/
 #include "flash_if.h"
 
-
+/* Private typedef -----------------------------------------------------------*/
+/* Private define ------------------------------------------------------------*/
+/* Private macro -------------------------------------------------------------*/
+/* Private variables ---------------------------------------------------------*/
+/* Private function prototypes -----------------------------------------------*/
 static uint32_t GetSector(uint32_t Address);
 
-
-
-
-
-
-
-
-
+/* Private functions ---------------------------------------------------------*/
 
 /**
- * @brief  This function does an erase of all user flash area
- * @param  StartAddress: start address for erasing. Must be a multiple of sector size.
- * @param  EndAddress: end address for erasing. Must be a multiple of sector size.
- * @retval FLASHIF_OK if successful, FLASHIF_ERASE_ERROR if error occurred
- */
-uint32_t FLASH_If_Erase(uint32_t StartAddress, uint32_t EndAddress)
+  * @brief  This function does an erase of all user flash area
+  * @param  StartSector: start of user flash area
+  * @retval 0: user flash area successfully erased
+  *         1: error occurred
+  */
+uint32_t FLASH_If_Erase(uint32_t startAddress, uint32_t endAddress)
 {
-    uint32_t StartSector = 0, EndSector = 0, SectorError = 0;
-    FLASH_EraseInitTypeDef pEraseInitStruct;
-    uint8_t SectorCount;
+    uint32_t startSector;
+    uint32_t endSector;
+    uint32_t SectorError;
+    FLASH_EraseInitTypeDef pEraseInit;
+    uint8_t sectorCount;
     uint32_t ret;
 
     /* Unlock the Flash to enable the flash control register access *************/
@@ -33,56 +84,42 @@ uint32_t FLASH_If_Erase(uint32_t StartAddress, uint32_t EndAddress)
                            FLASH_FLAG_PGAERR | FLASH_FLAG_PGPERR | FLASH_FLAG_PGSERR);
 
     /* Get the sector where start the user flash area */
-    StartSector = GetSector(StartAddress);
-    /* Get the sector where ends the user flash area */
-    EndSector = GetSector(EndAddress);
-    /* Get the number of sector to erase from 1st sector */
-    SectorCount = (EndSector - StartSector) + 1;
-    /* Fill EraseInit structure*/
-    pEraseInitStruct.TypeErase = TYPEERASE_SECTORS;
-    pEraseInitStruct.VoltageRange = VOLTAGE_RANGE_3;
-    pEraseInitStruct.Sector = StartSector;
-    pEraseInitStruct.NbSectors = SectorCount;
+    startSector = GetSector(startAddress);
+    endSector = GetSector(endAddress);
+    sectorCount = endSector - startSector + 1;
+    pEraseInit.TypeErase = TYPEERASE_SECTORS;
+    pEraseInit.Sector = startSector;
+    pEraseInit.NbSectors = sectorCount;
+    pEraseInit.VoltageRange = VOLTAGE_RANGE_3;
 
-    if (HAL_FLASHEx_Erase(&pEraseInitStruct, &SectorError) != HAL_OK) {
-        /*
-          Error occurred while sector erase.
-          User can add here some code to deal with this error.
-          SectorError will contain the faulty sector and then to know the code error on this sector,
-          user can call function 'HAL_FLASH_GetError()'
-        */
+    if (HAL_FLASHEx_Erase(&pEraseInit, &SectorError) != HAL_OK) {
+        /* Error occurred while page erase */
         ret = FLASHIF_ERASE_ERROR;
         goto out;
     }
     ret = FLASHIF_OK;
-    
-
 out:
-    /* Lock the Flash to disable the flash control register access (recommended
-       to protect the FLASH memory against possible unwanted operation) *********/
     HAL_FLASH_Lock();
 
     return ret;
-
 }
 
-
 /**
- * @brief  This function writes a data buffer in flash (data are 32-bit aligned).
- * @note   After writing data buffer, the flash content is checked.
- * @param  FlashAddress: start address for writing data buffer. Must be a multiple of 4.
- * @param  pData: pointer on data buffer
- * @param  DataLength: length of data buffer (unit is byte)
- * @retval FLASHIF_OK if successful, FLASHIF_WRITINGCTRL_ERROR if writing control failed,
- *         FLASHIF_WRITING_ERROR if program error occurred
- */
-uint32_t FLASH_If_Write(uint32_t FlashAddress, uint32_t *pData, uint32_t DataLength)
+  * @brief  This function writes a data buffer in flash (data are 32-bit aligned).
+  * @note   After writing data buffer, the flash content is checked.
+  * @param  FlashAddress: start address for writing data buffer
+  * @param  Data: pointer on data buffer
+  * @param  DataLength: length of data buffer
+  * @retval 0: Data successfully written to Flash memory
+  *         1: Error occurred while writing data in Flash memory
+  *         2: Written Data in flash memory is different from expected one
+  */
+uint32_t FLASH_If_Write(uint32_t FlashAddress, const uint8_t *Data, uint32_t DataLength)
 {
     uint32_t i = 0;
-    uint32_t DataLengthWords = DataLength / 4;
-    uint32_t WriteAddress = FlashAddress;
-    uint32_t ret = 0;
-
+    uint32_t dataLengthWord = DataLength / 4;
+    uint32_t writeAddress = FlashAddress;
+    uint32_t ret;
 
     /* Unlock the Flash to enable the flash control register access *************/
     HAL_FLASH_Unlock();
@@ -91,61 +128,51 @@ uint32_t FLASH_If_Write(uint32_t FlashAddress, uint32_t *pData, uint32_t DataLen
     __HAL_FLASH_CLEAR_FLAG(FLASH_FLAG_EOP | FLASH_FLAG_OPERR | FLASH_FLAG_WRPERR |
                            FLASH_FLAG_PGAERR | FLASH_FLAG_PGPERR | FLASH_FLAG_PGSERR);
 
-    /* Program the user Flash area word by word */
-    for (i = 0; (i < DataLengthWords) && (WriteAddress < (FLASH_END_ADDRESS - 4)); i++) {
-
-        /* Device voltage range supposed to be [2.7V to 3.6V], the operation will be done by word */
-        if (HAL_FLASH_Program(TYPEPROGRAM_WORD, WriteAddress, *(uint32_t *)(pData + 4 * i)) == HAL_OK) {
+    for (i = 0; (i < dataLengthWord) && (writeAddress <= (FLASH_END_ADDRESS - 4)); i++) {
+        /* Device voltage range supposed to be [2.7V to 3.6V], the operation will
+           be done by word */
+        if (HAL_FLASH_Program(TYPEPROGRAM_WORD, writeAddress, *(uint32_t *) (Data + 4 * i)) == HAL_OK) {
             /* Check the written value */
-            if (*(uint32_t *)WriteAddress != *(uint32_t *)(pData + 4 * i)) {
+            if (*(uint32_t *) writeAddress != *(uint32_t *) (Data + 4 * i)) {
                 /* Flash content doesn't match SRAM content */
                 ret = FLASHIF_WRITINGCTRL_ERROR;
                 goto out;
             }
             /* Increment FLASH destination address */
-            WriteAddress += 4;
+            writeAddress += 4;
         } else {
             /* Error occurred while writing data in Flash memory */
             ret = FLASHIF_WRITING_ERROR;
             goto out;
         }
     }
+
     for (i = 0; i < DataLength % 4; i++) {
-        if (HAL_FLASH_Program(TYPEPROGRAM_BYTE, WriteAddress, *(uint8_t *)(pData + WriteAddress - FlashAddress)) == HAL_OK) {
-            /* Check the written value */
-            if (*(uint8_t *)WriteAddress != *(uint8_t *)(pData + WriteAddress - FlashAddress)) {
-                /* Flash content doesn't match SRAM content */
+        if (HAL_FLASH_Program(TYPEPROGRAM_BYTE, writeAddress,
+                              *(uint8_t *) (Data + writeAddress - FlashAddress)) == HAL_OK) {
+            if (*(uint8_t *) writeAddress != *(uint8_t *) (Data + writeAddress - FlashAddress)) {
                 ret = FLASHIF_WRITINGCTRL_ERROR;
                 goto out;
             }
-            /* Increment FLASH destination address */
-            WriteAddress += 1;
+            writeAddress += 1;
         } else {
-            /* Error occurred while writing data in Flash memory */
             ret = FLASHIF_WRITING_ERROR;
             goto out;
         }
-    }    
+    }
     ret = FLASHIF_OK;
-
 out:
-    /* Lock the Flash to disable the flash control register access (recommended
-       to protect the FLASH memory against possible unwanted operation) *********/
     HAL_FLASH_Lock();
 
     return ret;
-
 }
 
-
-
 /**
- * @brief  Get the write protection status
- * @retval FLASHIF_PROTECTION_NONE: no protection
- *         FLASHIF_PROTECTION_WRPENABLED: write protection is enabled
- *         FLASHIF_PROTECTION_RDPENABLED: read protection is enabled
- *         FLASHIF_PROTECTION_PCROPENABLED: proprietary code readout protection is enabled
- */
+  * @brief  Returns the write protection status of user flash area.
+  * @param  None
+  * @retval 0: No write protected sectors inside the user flash area
+  *         1: Some sectors inside the user flash area are write protected
+  */
 uint16_t FLASH_If_GetWriteProtectionStatus(void)
 {
     uint32_t ProtectedSECTOR = 0xFFF;
@@ -157,34 +184,28 @@ uint16_t FLASH_If_GetWriteProtectionStatus(void)
     /* Check if there are write protected sectors inside the user flash area ****/
     HAL_FLASHEx_OBGetConfig(&OptionsBytesStruct);
 
-
     /* Lock the Flash to disable the flash control register access (recommended
        to protect the FLASH memory against possible unwanted operation) *********/
     HAL_FLASH_Lock();
 
     /* Get pages already write protected ****************************************/
-    ProtectedSECTOR = (OptionsBytesStruct.WRPSector) & FLASH_SECTOR_TO_BE_PROTECTED;
+    ProtectedSECTOR = ~(OptionsBytesStruct.WRPSector) & FLASH_SECTOR_TO_BE_PROTECTED;
 
     /* Check if desired pages are already write protected ***********************/
     if (ProtectedSECTOR != 0) {
-        /* Some pages are write protected */
+        /* Some sectors inside the user flash area are write protected */
         return FLASHIF_PROTECTION_WRPENABLED;
     } else {
-        /* No write protected pages */
+        /* No write protected sectors inside the user flash area */
         return FLASHIF_PROTECTION_NONE;
     }
 }
 
-
-
-
-
-
 /**
- * @brief Get the Sector object
- * @param Address 
- * @return uint32_t 
- */
+  * @brief  Gets the sector of a given address
+  * @param  Address: Flash address
+  * @retval The sector of a given address
+  */
 static uint32_t GetSector(uint32_t Address)
 {
     uint32_t sector = 0;
@@ -211,18 +232,19 @@ static uint32_t GetSector(uint32_t Address)
         sector = FLASH_SECTOR_9;
     } else if ((Address < ADDR_FLASH_SECTOR_11) && (Address >= ADDR_FLASH_SECTOR_10)) {
         sector = FLASH_SECTOR_10;
-    } else /* (Address < FLASH_END_ADDRESS) && (Address >= ADDR_FLASH_SECTOR_11) */ {
+    } else /*(Address < FLASH_END_ADDR) && (Address >= ADDR_FLASH_SECTOR_11))*/
+    {
         sector = FLASH_SECTOR_11;
     }
-
     return sector;
-
 }
 
-
-
-
-HAL_StatusTypeDef FLASH_IF_WriteProtectionConfig(uint32_t modifier)
+/**
+  * @brief  Configure the write protection status of user flash area.
+  * @param  modifier DISABLE or ENABLE the protection
+  * @retval HAL_StatusTypeDef HAL_OK if change is applied.
+  */
+HAL_StatusTypeDef FLASH_If_WriteProtectionConfig(uint32_t modifier)
 {
     uint32_t ProtectedSECTOR = 0xFFF;
     FLASH_OBProgramInitTypeDef config_new, config_old;
@@ -253,13 +275,10 @@ HAL_StatusTypeDef FLASH_IF_WriteProtectionConfig(uint32_t modifier)
     result = HAL_FLASHEx_OBProgram(&config_new);
 
     return result;
-
-
-
 }
 
+/**
+  * @}
+  */
 
-
-
-
-
+/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

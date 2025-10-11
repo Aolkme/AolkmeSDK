@@ -26,7 +26,7 @@ extern "C" {
 T_AolkmeReturnCode BootServiceStart(void);
 
 
-
+void JumpToApp(void);
 
 
 

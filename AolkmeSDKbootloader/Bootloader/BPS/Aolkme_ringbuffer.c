@@ -3,6 +3,9 @@
 /* Includes ------------------------------------------------------------------*/
 #include "aolkme_ringbuffer.h"
 #include <string.h>
+#include "main.h"
+#include "usart.h"
+
 
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
@@ -42,6 +45,7 @@ void RingBuf_Init(T_RingBuffer *pthis, uint8_t *pBuf, uint16_t bufSize)
     pthis->writeIndex = 0;
     pthis->bufferPtr = pBuf;
     pthis->bufferSize = RingBuf_CutBufSizeToPowOfTwo(bufSize);
+	
 }
 
 /**
@@ -54,16 +58,18 @@ void RingBuf_Init(T_RingBuffer *pthis, uint8_t *pBuf, uint16_t bufSize)
 uint16_t RingBuf_Put(T_RingBuffer *pthis, const uint8_t *pData, uint16_t dataLen)
 {
     uint16_t writeUpLen;
-
+	
     dataLen = RINGBUF_MIN(dataLen, (uint16_t) (pthis->bufferSize - pthis->writeIndex + pthis->readIndex));
 
     //fill up data
     writeUpLen = RINGBUF_MIN(dataLen, (uint16_t) (pthis->bufferSize - (pthis->writeIndex & (pthis->bufferSize - 1))));
     memcpy(pthis->bufferPtr + (pthis->writeIndex & (pthis->bufferSize - 1)), pData, writeUpLen);
 
+	
     //fill begin data
     memcpy(pthis->bufferPtr, pData + writeUpLen, dataLen - writeUpLen);
 
+	
     pthis->writeIndex += dataLen;
 
     return dataLen;
@@ -77,9 +83,9 @@ uint16_t RingBuf_Put(T_RingBuffer *pthis, const uint8_t *pData, uint16_t dataLen
 * @return Length of data to be read.
  */
 uint16_t RingBuf_Get(T_RingBuffer *pthis, uint8_t *pData, uint16_t dataLen)
-{
+{	
     uint16_t readUpLen;
-
+	
     dataLen = RINGBUF_MIN(dataLen, (uint16_t) (pthis->writeIndex - pthis->readIndex));
 
     //get up data
@@ -90,7 +96,8 @@ uint16_t RingBuf_Get(T_RingBuffer *pthis, uint8_t *pData, uint16_t dataLen)
     memcpy(pData + readUpLen, pthis->bufferPtr, dataLen - readUpLen);
 
     pthis->readIndex += dataLen;
-
+	
+	
     return dataLen;
 }
 

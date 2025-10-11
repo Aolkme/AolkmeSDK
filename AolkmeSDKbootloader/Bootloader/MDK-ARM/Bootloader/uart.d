@@ -32,6 +32,7 @@ bootloader\uart.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 bootloader\uart.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 bootloader\uart.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 bootloader\uart.o: ..\BPS\uart.h
+bootloader\uart.o: ../Core/Inc/usart.h
 bootloader\uart.o: ..\BPS\aolkme_ringbuffer.h
 bootloader\uart.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 bootloader\uart.o: ../Core/Inc/FreeRTOSConfig.h
@@ -50,3 +51,4 @@ bootloader\uart.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\string.h
 bootloader\uart.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
 bootloader\uart.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stdio.h
 bootloader\uart.o: ../../../AolkmeSDKProject/AOLKME/include/Aolkme_error.h
+bootloader\uart.o: ..\Boot\BIOS\BIOS_menu.h

@@ -147,7 +147,9 @@ void StartDefaultTask(void *argument)
 void LED_Task(void *argument)
 {
   /* USER CODE BEGIN LED_Task */
+
 	BootServiceStart();
+
   /* Infinite loop */
   for(;;)
   {

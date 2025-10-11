@@ -41,5 +41,7 @@ bootloader\bios_menu.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stdio.h
 bootloader\bios_menu.o: ../../../AolkmeSDKProject/AOLKME/include/Aolkme_error.h
 bootloader\bios_menu.o: ..\BPS\Common.h
 bootloader\bios_menu.o: ..\BPS\uart.h
+bootloader\bios_menu.o: ../Core/Inc/usart.h
 bootloader\bios_menu.o: ..\BPS\flash_if.h
 bootloader\bios_menu.o: ..\Boot\Ymodem\ymodem.h
+bootloader\bios_menu.o: ../Boot/StartService/BootService.h

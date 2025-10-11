@@ -41,3 +41,6 @@ bootloader\bootservice.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.
 bootloader\bootservice.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 bootloader\bootservice.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 bootloader\bootservice.o: ..\BPS\Button.h
+bootloader\bootservice.o: ..\BPS\uart.h
+bootloader\bootservice.o: ../Core/Inc/usart.h
+bootloader\bootservice.o: ..\Boot\BIOS\BIOS_menu.h

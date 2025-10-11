@@ -30,23 +30,40 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx.h"
-
+#include "usart.h"
 /* Exported constants --------------------------------------------------------*/
 #define USING_UART_PORT_1
 #define USING_UART_PORT_2
 #define USING_UART_PORT_3
+#define USING_UART_PORT_4
+
+
+
 
 #define UART_ERROR      (-1)
 
 /* Exported macros -----------------------------------------------------------*/
 #define Aolkme_CONSOLE_UART_NUM             UART_NUM_2
-#define Aolkme_CONSOLE_UART_BAUD            921600
+#define Aolkme_CONSOLE_UART_BAUD            115200
+
+
+extern UART_HandleTypeDef huart2;
+#define s_uart2Handle huart2
+
+
+
+extern UART_HandleTypeDef huart4;
+#define s_uart4Handle huart4
+
+
+
 
 /* Exported types ------------------------------------------------------------*/
 typedef enum {
     UART_NUM_1 = 1,
     UART_NUM_2 = 2,
     UART_NUM_3 = 3,
+	UART_NUM_4 = 4,
 } E_UartNum;
 
 typedef struct {

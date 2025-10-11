@@ -89,7 +89,7 @@ int main(void)
   /* USER CODE END Init */
 
   /* Configure the system clock */
-  SystemClock_Config();
+  // SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
 
@@ -107,6 +107,32 @@ int main(void)
 
   /* Call init function for freertos objects (in cmsis_os2.c) */
   MX_FREERTOS_Init();
+
+	// 检查复位原因
+    if (__HAL_RCC_GET_FLAG(RCC_FLAG_BORRST)) {
+        printf("Reset caused by BOR\n");
+    }
+    if (__HAL_RCC_GET_FLAG(RCC_FLAG_PINRST)) {
+        printf("Reset caused by NRST pin\n");
+    }
+    if (__HAL_RCC_GET_FLAG(RCC_FLAG_PORRST)) {
+        printf("Reset caused by POR/PDR\n");
+    }
+    if (__HAL_RCC_GET_FLAG(RCC_FLAG_SFTRST)) {
+        printf("Reset caused by software\n");
+    }
+    if (__HAL_RCC_GET_FLAG(RCC_FLAG_IWDGRST)) {
+        printf("Reset caused by independent watchdog\n");
+    }
+    if (__HAL_RCC_GET_FLAG(RCC_FLAG_WWDGRST)) {
+        printf("Reset caused by window watchdog\n");
+    }
+    if (__HAL_RCC_GET_FLAG(RCC_FLAG_LPWRRST)) {
+        printf("Reset caused by low power\n");
+    }
+    
+    // 清除复位标志
+    __HAL_RCC_CLEAR_RESET_FLAGS();
 
   /* Start scheduler */
   osKernelStart();

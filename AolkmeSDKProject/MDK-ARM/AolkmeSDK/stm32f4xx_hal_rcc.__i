@@ -1,0 +1,6 @@
+--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../AolkmeComponent/AolkmeOSAL/src -I ../AolkmeComponent/AolkmeOSAL/include -I ../AOLKME/include -I ..\AOLKME\src\code -I ..\AOLKME\src\internal -I ../AolkmeComponent/AolkmeEvent/include -I ../AolkmeComponent/AolkmeEvent/src -I ../App -I ..\AolkmeComponent\Aolkmemisc -I ..\AolkmeComponent\AolkmeLogger -I ..\AolkmeComponent\AolkmeOSAL_SystemMonitor
+-I.\RTE\_AolkmeSDK
+-ID:\WorkSoftware\Keil\armPack\ARM\CMSIS\6.1.0\CMSIS\Core\Include
+-ID:\WorkSoftware\Keil\armPack\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DSTM32_THREAD_SAFE_STRATEGY="4"
+-o aolkmesdk\stm32f4xx_hal_rcc.o --omf_browse aolkmesdk\stm32f4xx_hal_rcc.crf --depend aolkmesdk\stm32f4xx_hal_rcc.d "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c"

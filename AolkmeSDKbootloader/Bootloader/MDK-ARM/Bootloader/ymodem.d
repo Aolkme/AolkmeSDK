@@ -31,7 +31,9 @@ bootloader\ymodem.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 bootloader\ymodem.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 bootloader\ymodem.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 bootloader\ymodem.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+bootloader\ymodem.o: ..\BPS\Common.h
 bootloader\ymodem.o: ..\BPS\uart.h
+bootloader\ymodem.o: ../Core/Inc/usart.h
 bootloader\ymodem.o: ../../../AolkmeSDKProject/AolkmeComponent/AolkmeOSAL/include/Aolkme_OSAL.h
 bootloader\ymodem.o: ../../../AolkmeSDKProject/AOLKME/include/Aolkme_platform.h
 bootloader\ymodem.o: ../../../AolkmeSDKProject/AOLKME/include/Aolkme_typedef.h
@@ -40,3 +42,6 @@ bootloader\ymodem.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\string.h
 bootloader\ymodem.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
 bootloader\ymodem.o: D:\WorkSoftware\Keil\ARM\ARMCC\Bin\..\include\stdio.h
 bootloader\ymodem.o: ../../../AolkmeSDKProject/AOLKME/include/Aolkme_error.h
+bootloader\ymodem.o: ..\BPS\flash_if.h
+bootloader\ymodem.o: ../Core/Inc/main.h
+bootloader\ymodem.o: ..\Boot\BIOS\BIOS_menu.h
